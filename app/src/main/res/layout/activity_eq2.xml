@@ -1,0 +1,117 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:orientation="vertical" android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:id="@+id/eq2"
+    android:weightSum="1">
+
+    <TextView
+        android:text="Introduce los valores de la ecuación de segundo grado:"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:id="@+id/textView2"
+        android:layout_weight="0.08"
+        android:textSize="24sp" />
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+        <EditText
+            android:layout_height="wrap_content"
+            android:inputType="numberSigned"
+            android:ems="10"
+            android:id="@+id/a"
+            android:hint="a(x²)"
+            android:textAlignment="center"
+            android:numeric="signed"
+            android:layout_alignParentTop="true"
+            android:layout_alignParentStart="true"
+            android:layout_width="125dp" />
+
+        <EditText
+            android:layout_height="wrap_content"
+            android:inputType="numberSigned"
+            android:ems="10"
+            android:id="@+id/b"
+            android:hint="b(x)"
+            android:textAlignment="center"
+            android:numeric="signed"
+            android:layout_width="125dp"
+            android:layout_alignParentTop="true"
+            android:layout_centerHorizontal="true" />
+
+        <EditText
+            android:layout_height="wrap_content"
+            android:inputType="numberSigned"
+            android:ems="10"
+            android:id="@+id/c"
+            android:hint="c"
+            android:textAlignment="center"
+            android:numeric="signed"
+            android:layout_width="125dp"
+            android:layout_alignParentTop="true"
+            android:layout_alignParentEnd="true" />
+    </RelativeLayout>
+
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:id="@+id/ecuacion"
+        android:layout_weight="0.04"
+        android:textAlignment="center"
+        android:textSize="22sp" />
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="138dp">
+
+        <Button
+            android:text="BORRAR"
+            android:layout_height="wrap_content"
+            android:id="@+id/del"
+            android:textSize="24sp"
+            android:layout_alignParentTop="true"
+            android:layout_alignParentStart="true"
+            android:onClick="borrar"
+            android:layout_width="180dp" />
+
+        <TextView
+            android:layout_height="50dp"
+            android:id="@+id/res1"
+            android:textAlignment="center"
+            android:numeric="signed|decimal"
+            android:hint="Primera solución"
+            android:textSize="18sp"
+            android:layout_alignParentBottom="true"
+            android:layout_alignParentStart="true"
+            android:layout_marginBottom="16dp"
+            android:layout_width="190dp" />
+
+        <TextView
+            android:layout_height="50dp"
+            android:id="@+id/res2"
+            android:textAlignment="center"
+            android:numeric="signed|decimal"
+            android:layout_width="190dp"
+            android:layout_alignTop="@+id/res1"
+            android:layout_alignParentEnd="true"
+            android:hint="Segunda solución"
+            android:textSize="18sp" />
+
+        <Button
+            android:text="CALCULA"
+            android:layout_height="wrap_content"
+            android:id="@+id/calcula"
+            android:textSize="24sp"
+            android:onClick="calcular"
+            android:layout_row="0"
+            android:layout_column="1"
+            android:layout_weight="0.08"
+            android:layout_alignParentTop="true"
+            android:layout_alignParentEnd="true"
+            android:layout_width="180dp" />
+    </RelativeLayout>
+
+</LinearLayout>
